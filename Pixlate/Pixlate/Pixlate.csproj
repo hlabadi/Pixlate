@@ -129,6 +129,7 @@
   <ItemGroup>
     <Content Include="Assets\AlignmentGrid.png" />
     <Content Include="Assets\AppBar\feature.camera.png" />
+    <Content Include="Assets\AppBar\save.png" />
     <Content Include="Assets\ApplicationIcon.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>

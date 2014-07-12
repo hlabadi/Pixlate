@@ -26,10 +26,6 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel"  Margin="12,0,12,0">
-            <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,0">
-                <TextBlock Text="PIXLATE" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-
-            </StackPanel>
             <Image x:Name="ResultImage" Width="800" Height="480"  Stretch="UniformToFill"/>
         </Grid>
    </Grid>

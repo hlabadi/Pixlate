@@ -9,13 +9,18 @@ using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Microsoft.Phone.Tasks;
 using Nokia.Graphics.Imaging;
+using System.Runtime.InteropServices.WindowsRuntime;
 using Pixlate.Resources;
 using System.Windows.Media.Imaging;
+using Windows.Storage.Streams;
+using Microsoft.Xna.Framework.Media;
 
 namespace Pixlate
 {
     public partial class MainPage : PhoneApplicationPage
     {
+        private PixlateEffect _effect;
+
         // Constructor
         public MainPage()
         {
@@ -44,7 +49,7 @@ namespace Pixlate
                 {
                     using (var effect = new PixlateEffect(source))
                     {
-                        //var target = new WriteableBitmap(1920, 1080);
+                        _effect = effect;
                         var target = new WriteableBitmap((int)ResultImage.ActualWidth, (int)ResultImage.ActualHeight);
                         // Create a new renderer which outputs WriteableBitmaps
                         using (var renderer = new WriteableBitmapRenderer(effect, target))
@@ -65,6 +70,7 @@ namespace Pixlate
                 return;
             }
         }
+
 
     }
 }
